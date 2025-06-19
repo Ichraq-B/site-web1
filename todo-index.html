@@ -1,0 +1,71 @@
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Animée</title>
+    <link rel="stylesheet" href="todo-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="highlight">To-Do</span> List</h1>
+            <p class="subtitle">Organisez vos tâches avec style</p>
+        </header>
+
+        <div class="todo-container">
+            <div class="input-container">
+                <input type="text" id="task-input" placeholder="Ajouter une nouvelle tâche...">
+                <button id="add-button">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="active">Actives</button>
+                <button class="filter-btn" data-filter="completed">Terminées</button>
+                <div class="filter-indicator"></div>
+            </div>
+
+            <ul id="task-list">
+                <!-- Les tâches seront générées ici par JavaScript -->
+            </ul>
+
+            <div class="list-footer">
+                <span id="tasks-counter">0 tâches au total</span>
+                <button id="clear-completed">Effacer terminées</button>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-card">
+                <div class="icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <h3>Ajoutez</h3>
+                <p>Saisissez une tâche et appuyez sur le bouton "+"</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3>Terminez</h3>
+                <p>Cliquez sur une tâche pour la marquer comme terminée</p>
+            </div>
+            <div class="info-card">
+                <div class="icon">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <h3>Supprimez</h3>
+                <p>Cliquez sur l'icône de suppression pour retirer une tâche</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
